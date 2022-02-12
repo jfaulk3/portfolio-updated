@@ -1,5 +1,10 @@
 import React from "react";
 
 export default function Home() {
-  return <h1>Home Page</h1>;
+  return (
+    <React.Fragment>
+      <h1 className="text-3xl font-bold underline">Home Page</h1>
+      <h1 className="text-20xl font-bold underline">Hello world!</h1>
+    </React.Fragment>
+  );
 }

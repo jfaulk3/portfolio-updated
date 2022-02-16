@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client";
-import imageUrlBuilder from "@sanity/image-url";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
-
-  const builder = imageUrlBuilder(sanityClient);
-  function urlFor(source) {
-    return builder.image(source);
-  }
 
   useEffect(() => {
     sanityClient

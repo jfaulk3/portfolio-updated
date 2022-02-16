@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client";
+import imageUrlBuilder from "@sanity/image-url";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
+
+  const builder = imageUrlBuilder(sanityClient);
+  function urlFor(source) {
+    return builder.image(source);
+  }
 
   useEffect(() => {
     sanityClient
       .fetch(
         `*[_type == "project"]{
       title,
+      "projectImage": image.asset->url,
       github_link,
       description,
       projectType,
@@ -19,6 +26,7 @@ export default function Project() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
+  if (!projectData) return <div>Loading...</div>;
   return (
     <main className="bg-gray-200 min-h-screen p-12">
       <section className="container mx-auto">

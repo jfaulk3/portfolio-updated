@@ -6,23 +6,23 @@ export default function Nav() {
   return (
     <header className="bg-red-500">
       <div className="container mx-auto flex justify-between">
-        <nav className="flex">
+        <nav className="flex nav-container">
           <NavLink
             to="/"
             exact="true"
-            className="inflex-flex items-center py-7 px-3 mr-4 text-red-100 hover:text-blue-800 text-4xl font-bold cursive tracking-widest"
+            className="nav-item inflex-flex items-center text-red-100 hover:text-blue-800 text-4xl font-bold cursive tracking-widest"
           >
             Home
           </NavLink>
           <NavLink
             to="about"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-blue-800"
+            className="nav-item inline-flex items-center rounded text-red-200 hover:text-blue-800"
           >
             About Me
           </NavLink>
           <NavLink
             to="project"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-blue-800"
+            className="nav-item inline-flex items-center rounded text-red-200 hover:text-blue-800"
           >
             Projects
           </NavLink>
@@ -30,17 +30,15 @@ export default function Nav() {
         <div className="inline-flex py-3 px-3 my-6">
           <SocialIcon
             url="https://github.com/jfaulk3"
-            className="mr-4"
+            className="mr-4 nav-icon"
             target="_blank"
             fgColor="#fff"
-            style={{ height: 35, width: 35 }}
           />
           <SocialIcon
             url="https://www.linkedin.com/in/faulknerjimmie3/"
-            className="mr-4"
+            className="mr-4 nav-icon"
             target="_blank"
             fgColor="#fff"
-            style={{ height: 35, width: 35 }}
           />
         </div>
       </div>

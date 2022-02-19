@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import image from "../author-splash-image.jpg";
+import image from "../images/author-splash-image.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
@@ -16,7 +16,7 @@ export default function About() {
     sanityClient
       .fetch(
         `*[_type == "author"]{
-      name,
+      name, 
       bio,
       "authorImage": image.asset->url
     }`

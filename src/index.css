@@ -26,17 +26,37 @@
   background-color: white;
 }
 
+.about-background {
+  background-image: url("images/author-splash-image.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 100vh;
+}
+
+.about-background div {
+  padding: 48 10 10 10;
+  margin: auto;
+}
+
+.about-background section {
+  padding: 30px;
+}
+
+.nav-container {
+  flex-direction: row;
+}
+
+.nav-item {
+  padding: 30px;
+  margin: auto;
+}
+
 @media only screen and (max-width: 1500px) {
   .home-name {
     font-size: 75px;
-  }
-  .nav-container {
-    flex-direction: row;
-  }
-
-  .nav-item {
-    padding: 30px;
-    margin: auto;
   }
 }
 
@@ -55,5 +75,15 @@
   .nav-item {
     padding: 3px;
     margin: auto;
+  }
+
+  .about-background section {
+    padding: 30px;
+    magin: auto;
+  }
+
+  .about-background h1 {
+    font-size: 30px;
+    padding: 0;
   }
 }
